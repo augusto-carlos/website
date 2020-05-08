@@ -52,9 +52,10 @@ body {
     font-size: 14px;
 }
 
-button {
+button, .btn {
     padding: 10px 20px;
     border-radius: 2px;
+    margin: 14px 0;
     border: none;
     background: #fab345;
     color: #ffffff;
@@ -62,7 +63,9 @@ button {
     font-size: 16px;
     font-weight: 600;
     font-family: Roboto, sans-serif;
-    /* box-shadow: 3px 3px 11px 1px rgba(161, 161, 161, 0.32); */
+    box-shadow: 3px 3px 11px 1px rgba(161, 161, 161, 0.22);
+    display: inline-block;
+    text-decoration: none;
 }
 
 
@@ -134,7 +137,7 @@ nav.navbar ul {
 nav.navbar ul li a{
     color: #afafaf;
     display: block;
-    padding: 10px;
+    padding: 19px;
     text-decoration: none;
     text-transform: uppercase;
 }
