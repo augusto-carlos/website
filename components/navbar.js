@@ -1,6 +1,6 @@
-import Container from './Container';
+import Container from './container';
 import Link from 'next/link';
-import { FiGithub, FiLinkedin, FiTwitter, FiMoon } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 
 export default function NavBar() {
@@ -12,27 +12,27 @@ export default function NavBar() {
             Augusto da Silva
           </h1>
           <ul className="flex flex-row text-center my-4 md:0 text-lg md:pl-8">
-            <li class="ml-4">
+            <li className="ml-4">
               <Link href="#about">About</Link>
             </li>
-            <li class="ml-4">
+            <li className="ml-4">
               <Link href="#projects">Projects</Link>
             </li>
-            <li class="ml-4">
+            <li className="ml-4">
               <Link href="#blog">Blog</Link>
             </li>
           </ul>
           <ul className="flex flex-row items-center text-center md:text-left text-lg md:pl-8">
-            <li class="ml-4">
+            <li className="ml-4">
               <FiGithub />
             </li>
-            <li class="ml-4">
+            <li className="ml-4">
               <FiTwitter />
             </li>
-            <li class="ml-4">
+            <li className="ml-4">
               <FiLinkedin />
             </li>
-            <li class="ml-6">
+            <li className="ml-6">
               <RiSunFill color="#f1e473" size="24" />
             </li>
           </ul>

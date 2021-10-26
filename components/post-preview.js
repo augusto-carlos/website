@@ -22,7 +22,7 @@ export default function PostPreview({
           width={556}
         />
       </div>
-      <h3 className="font-ubuntu font-gradient text-3xl mb-3 leading-snug">
+      <h3 className="font-semibold font-gradient text-2xl mb-3 leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="hover:underline">{title}</a>
         </Link>

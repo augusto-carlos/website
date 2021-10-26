@@ -2,28 +2,24 @@
 
 /* Write your own custom base styles here */
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 body {
   font-family: Inter;
   font-size: 14px;
-  background-color: #111827;
-  color: #fff;
+  background-color: #2a2d33;
+  color: #eee;
 }
 
 .font-overpass {
   font-family: Overpass, Inter, sans-serif;
 }
 
-.font-ubuntu {
-  font-family: Ubuntu, Inter, sans-serif;
+.font-gradient {
+ background: linear-gradient(120deg, #00bcd4, #ca1d86);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.font-gradient {
-  background: -webkit-linear-gradient(rgb(10, 12, 82), rgb(185, 27, 151));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* Start purging... */
 @tailwind components;

@@ -16,7 +16,6 @@ export default function Index({ allPosts }) {
           <title>Augusto da Silva</title>
         </Head>
         <Container>
-          <Header />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
