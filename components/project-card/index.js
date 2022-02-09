@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { FiGithub, FiLink } from 'react-icons/fi';
-import imgCard from '../../public/assets/images/card-img.png';
+// import imgCard from '../../public/assets/images/card-img.png';
 
 export default function ProjectCard({ image, platform, title, desc, tags }) {
   return (
