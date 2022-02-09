@@ -9,9 +9,9 @@ export default function Layout({ preview, children }) {
       <div className="min-h-screen">
         {/* <Alert preview={preview} /> */}
         <NavBar />
-        <main className="pt-40">{children}</main>
+        <main>{children}</main>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

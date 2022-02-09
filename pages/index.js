@@ -1,6 +1,7 @@
-import Container from '../components/container';
-import MoreStories from '../components/more-stories';
-import Header from '../components/header';
+import About from '../components/leading/about';
+import Services from '../components/leading/services';
+import HomeBanner from '../components/home-banner';
+import Projects from '../components/leading/projects';
 import Layout from '../components/layout';
 import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
@@ -10,16 +11,18 @@ export default function Index({ allPosts }) {
   const morePosts = allPosts.slice(1);
 
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Augusto da Silva</title>
-        </Head>
-        <Container>
+    <Layout>
+      <Head>
+        <title>Augusto da Silva</title>
+      </Head>
+      <HomeBanner />
+      <About />
+      <Services />
+      {/* <Projects /> */}
+      {/* <Container>
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
+        </Container> */}
+    </Layout>
   );
 }
 

@@ -1,25 +1,182 @@
 @tailwind base;
 
-/* Write your own custom base styles here */
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
+@font-face {
+  font-family: 'Circular';
+  src: url('../public/assets/circular.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: Inter;
-  font-size: 14px;
+  font-family: Circular, inter, sans-serif;
+  font-size: 20px;
   background-color: #2a2d33;
-  color: #eee;
+  color: #e1eeed;
 }
 
-.font-overpass {
-  font-family: Overpass, Inter, sans-serif;
+a:hover {
+  transition: 0.3s;
+  color: #5b75b1;
 }
 
-.font-gradient {
- background: linear-gradient(120deg, #00bcd4, #ca1d86);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.banner {
+  background: url(../public/assets/images/blob.svg) 50% no-repeat;
 }
 
+.text-subtitle {
+  margin: 4px 0px;
+  font-size: 2rem;
+}
+
+.avatar {
+  padding: 20px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  max-width: 100px;
+  border: 8px dotted #4a3174;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 40%;
+}
+
+.widget svg {
+  background: #eeeeee0f;
+  padding: 30px;
+  border-radius: 14px;
+  font-size: 6rem;
+}
+
+.widget p {
+  color: #c0ccd0;
+}
+
+.font-main {
+  font-weight: 700;
+}
+
+.icon-container {
+  padding: 4px;
+  border-radius: 50%;
+  border: 1px solid #4a3174;
+  background: #36383e;
+}
+
+.bg-blur {
+  background: #2a2d331c;
+  backdrop-filter: blur(2px);
+}
+
+#about section {
+  max-width: 50%;
+}
+
+#about img {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #eeeeee0f;
+}
+
+.banner-title {
+  font-size: 4.25rem;
+  line-height: 5.5rem;
+  text-align: center;
+}
+
+.pulse {
+  box-shadow: 0 0 3px 4px #4a3174;
+  transform: scale(1);
+  animation: pulse 1s infinite;
+}
+
+.text-desc {
+  font-size: 14px;
+  background: #eeeeee0f;
+  border-radius: 14px;
+  padding: 0px 13px;
+  margin: 8px;
+}
+
+.font-gradient,
+.text-desc,
+.text-subtitle {
+  background: linear-gradient(114deg, #2196f3, #e9467e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: 00bcd4;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 #69317485;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: 00bcd4;
+  }
+}
 
 /* Start purging... */
 @tailwind components;
@@ -32,3 +189,46 @@ body {
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+.project-card {
+  max-width: 500px;
+  border: 1px solid #656565;
+  border-radius: 10px;
+}
+.project-card:hover {
+  box-shadow: 0px 2px 3px 3px #28282814;
+}
+
+.project-card .legend {
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.project-card picture:hover .legend {
+  opacity: 1;
+}
+
+.legend {
+  padding: 20px;
+}
+
+.tags span {
+  padding: 4px 8px;
+  background: #6f717626;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.actions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 1px solid #9c27b0;
+  border-radius: 20px;
+  padding: 4px 14px;
+  margin: 10px;
+}
+.actions svg {
+  margin-right: 6px;
+}
