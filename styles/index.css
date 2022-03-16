@@ -18,17 +18,17 @@ html {
 body {
   font-family: Circular, inter, sans-serif;
   font-size: 20px;
-  background-color: #2a2d33;
-  color: #e1eeed;
+  background-color: #101011;
+  color: #b7b7b7;
 }
 
 a:hover {
   transition: 0.3s;
-  color: #5b75b1;
+  color: #6e4c19;
 }
 
 .banner {
-  background: url(../public/assets/images/blob.svg) 50% no-repeat;
+  background: url(../public/assets/images/blocks.svg) 50% no-repeat;
 }
 
 .text-subtitle {
@@ -42,8 +42,13 @@ a:hover {
 
 .avatar img {
   border-radius: 50%;
-  max-width: 100px;
-  border: 8px dotted #4a3174;
+  max-width: 250px !important;
+  padding: 14px !important;
+  border: 2px dashed #2e2210 !important;
+}
+
+.navbar-button {
+  background-color: #6f4e1c;
 }
 
 .widget {
@@ -51,12 +56,20 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  max-width: 40%;
+}
+
+.widget .actions {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.widget:hover .actions {
+  opacity: 1;
 }
 
 .widget svg {
   background: #eeeeee0f;
+  border: 1px solid #483313;
   padding: 30px;
   border-radius: 14px;
   font-size: 6rem;
@@ -66,6 +79,15 @@ a:hover {
   color: #c0ccd0;
 }
 
+form input {
+  padding: 5px 12px;
+  background: #ffffff0f;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  margin: 20px 0;
+}
+
 .font-main {
   font-weight: 700;
 }
@@ -73,23 +95,12 @@ a:hover {
 .icon-container {
   padding: 4px;
   border-radius: 50%;
-  border: 1px solid #4a3174;
-  background: #36383e;
+  background: #36383e31;
 }
 
 .bg-blur {
   background: #2a2d331c;
   backdrop-filter: blur(2px);
-}
-
-#about section {
-  max-width: 50%;
-}
-
-#about img {
-  width: 250px;
-  padding: 20px;
-  border: 1px solid #eeeeee0f;
 }
 
 .banner-title {
@@ -99,8 +110,6 @@ a:hover {
 }
 
 .pulse {
-  box-shadow: 0 0 3px 4px #4a3174;
-  transform: scale(1);
   animation: pulse 1s infinite;
 }
 
@@ -115,7 +124,7 @@ a:hover {
 .font-gradient,
 .text-desc,
 .text-subtitle {
-  background: linear-gradient(114deg, #2196f3, #e9467e);
+  background: linear-gradient(124deg, #742c2c, #da8a14);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -152,18 +161,15 @@ a:hover {
 
 @keyframes pulse {
   0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 #69317485;
+    transform: translateY(8px);
   }
 
   70% {
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    transform: translateY(0px);
   }
 
   100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transform: translateY(8px);
   }
 }
 
@@ -191,7 +197,6 @@ a:hover {
 /* Your own custom utilities */
 
 .project-card {
-  max-width: 500px;
   border: 1px solid #656565;
   border-radius: 10px;
 }
@@ -203,9 +208,9 @@ a:hover {
   opacity: 0;
   transition: 0.7s;
 }
-
-.project-card picture:hover .legend {
-  opacity: 1;
+.project-icon {
+  width: 100px;
+  height: 100px;
 }
 
 .legend {
@@ -224,11 +229,10 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  border: 1px solid #9c27b0;
-  border-radius: 20px;
-  padding: 4px 14px;
-  margin: 10px;
+  padding: 4px;
+  margin: 8px;
 }
+
 .actions svg {
   margin-right: 6px;
 }

@@ -1,38 +1,46 @@
 import Image from 'next/image';
 import { FiGithub, FiLink } from 'react-icons/fi';
-// import imgCard from '../../public/assets/images/card-img.png';
 
-export default function ProjectCard({ image, platform, title, desc, tags }) {
+// interface ProjectModel{
+//   image:string
+//   :string
+//   desc:string
+//   platform:string
+//   tags:string[]
+// }
+
+export default function ProjectCard({
+  image,
+  platform,
+  icon,
+  title,
+  desc,
+  githubLink,
+  previewLink,
+}) {
   return (
-    <div className="project-card">
+    <div>
       <picture>
-        <Image src={imgCard} alt={title} />
-        <div className="flex flex-row justify-between legend">
-          <span className="platform">{platform}</span>
-          <div className="tags">
-            <span>flutter</span>
-            <span>clean arch</span>
-            <span>imdb</span>
-          </div>
-        </div>
+        <Image src={image} alt={title} width={100} />
       </picture>
+
       <div className="flex flex-row justify-between p-4">
-        <h4 className="text-subtitle">Charlotte</h4>
-        <div className="actions flex flex-row justify-between">
-          <a href="https://github.com/augusto-carlos/insound" target="_blank">
-            <FiLink />
-            Preview
-          </a>
-          <a href="https://github.com/augusto-carlos/insound" target="_blank">
-            <FiGithub />
-            Code
-          </a>
-        </div>
+        <section className="flex flex-row">
+          <Image src={icon} alt={`${title} logo`} className="project-icon" />
+          <div className="flex flex-col pl-4">
+            <h4 className="font-bold text-3xl">{title}</h4>
+            <p className="pt-3">{desc}</p>
+            <div className="actions flex flex-row justify-start">
+              <a href={previewLink} target="_blank">
+                <FiLink />
+              </a>
+              <a href={githubLink} target="_blank">
+                <FiGithub />
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-      <p className="p-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque alias
-        nobis rem minima accusamus itaque ut vitae, quam libero culpa.
-      </p>
     </div>
   );
 }

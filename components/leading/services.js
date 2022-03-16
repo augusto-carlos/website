@@ -6,9 +6,9 @@ export default function Services() {
     <Container>
       <div
         id="services"
-        className="flex flex-wrap items-center justify-around min-h-screen"
+        className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4 min-h-screen"
       >
-        <div className="widget">
+        <div className="widget p-4 text-center">
           <FiMonitor />
           <span className="text-subtitle" translate="no">
             Frontend
@@ -19,7 +19,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="widget">
+        <div className="widget p-4 text-center">
           <FiSmartphone />
           <span className="text-subtitle" translate="no">
             Mobile

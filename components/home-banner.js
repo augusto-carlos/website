@@ -1,6 +1,6 @@
 import Container from './container';
 import Image from 'next/image';
-import { FiArrowDown } from 'react-icons/fi';
+import { FiChevronDown } from 'react-icons/fi';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 
 export default function HomeBanner() {
@@ -15,7 +15,7 @@ export default function HomeBanner() {
         <span className="block text-xl text-desc">developing softwares...</span>
 
         <span className="icon-container pulse mt-4">
-          <FiArrowDown />
+          <FiChevronDown color="#6e4c19" />
         </span>
       </div>
     </Container>

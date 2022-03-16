@@ -1,4 +1,5 @@
-import imgProject from '../../public/assets/images/card-image.png';
+import imgProject from '../../public/assets/images/insound.png';
+import icon from '../../public/assets/images/insound-icon.png';
 import Container from '../container';
 import ProjectCard from '../project-card';
 
@@ -7,9 +8,17 @@ export default function Projects() {
     <Container>
       <div
         id="projects"
-        className="flex flex-wrap items-center justify-around min-h-screen"
+        className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-3 min-h-screen"
       >
-        <ProjectCard title="tsdfe" platform="android" />
+        <ProjectCard
+          title="insound"
+          platform="frontend"
+          desc="Stream, favorite and download your musics and podcasts"
+          image={imgProject}
+          icon={icon}
+          previewLink="https://github.com/augusto-carlos/insound"
+          githubLink="https://github.com/augusto-carlos/insound"
+        />
       </div>
     </Container>
   );

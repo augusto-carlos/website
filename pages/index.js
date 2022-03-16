@@ -2,6 +2,7 @@ import About from '../components/leading/about';
 import Services from '../components/leading/services';
 import HomeBanner from '../components/home-banner';
 import Projects from '../components/leading/projects';
+import Contact from '../components/leading/contact';
 import Layout from '../components/layout';
 import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
@@ -18,10 +19,8 @@ export default function Index({ allPosts }) {
       <HomeBanner />
       <About />
       <Services />
-      {/* <Projects /> */}
-      {/* <Container>
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container> */}
+      {/* <Projects />
+      <Contact /> */}
     </Layout>
   );
 }
