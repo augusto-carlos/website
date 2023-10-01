@@ -1,6 +1,6 @@
 import Container from '../container';
 import Image from 'next/image';
-import imgPath from '../../public/assets/images/me.jpg';
+import imgPath from '../../public/assets/images/me.jpeg';
 export default function About() {
   return (
     <Container>
